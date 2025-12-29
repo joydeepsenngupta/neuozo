@@ -364,13 +364,7 @@
     </style>
 </head>
 <body>
-    <div class="protection-message" id="protectionMessage">
-        <i class="fas fa-microchip" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
-        <h3>IP & Content Protected</h3>
-        <p>Neuozo enforces strict security protocols.<br>Right-click disabled.</p>
-    </div>
-
-    <header>
+       <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">
@@ -608,5 +602,25 @@
             observer.observe(el);
         });
     </script>
+    <script>
+        // Right-click protection
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            showProtectionMessage();
+        });
+        
+        // Disable keyboard shortcuts for right-click (Shift+F10, etc.)
+        document.addEventListener('keydown', function(e) {
+            // ... code disabling F12, Ctrl+Shift+I, etc ...
+        });
+        
+        // Show protection message
+        function showProtectionMessage() {
+            // ... code to show the popup ...
+        }
+        
+        // ...
+    </script>
 </body>
 </html>
+
